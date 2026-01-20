@@ -1,6 +1,8 @@
+import 'package:e_commarce_mobile_app_new/AppBindinig/app_binding.dart';
 import 'package:e_commarce_mobile_app_new/profile_view/profile_screen.dart';
 import 'package:e_commarce_mobile_app_new/search_view/search_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'favorite_view/favorite_screen.dart';
 import 'home_view/home_screen.dart';
@@ -15,10 +17,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'E-Commerce Mobile App',
       debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'cdf'),
+      initialBinding: AppBindings(),
+
     );
   }
 }

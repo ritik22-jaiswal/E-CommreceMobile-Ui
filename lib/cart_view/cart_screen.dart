@@ -1,7 +1,12 @@
+import 'package:e_commarce_mobile_app_new/viewModel/cart_vm/cart_vm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class MyCartScreen extends StatelessWidget {
+  MyCartScreen({super.key});
+ final controller= Get.find<CartViewModel>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -226,7 +231,7 @@ class MyCartScreen extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(width: 5),
-                              Text("1", style: TextStyle(color: Colors.black)),
+                              Text(controller.quantity.value.toString(), style: TextStyle(color: Colors.black)),
                               SizedBox(width: 5),
                               Container(
                                 margin: EdgeInsets.all(5),
